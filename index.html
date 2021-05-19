@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Countries</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Display Countries</h1>
+        </div>
+    </header>
+
+    <section>
+        <div class="container  input-search">
+            <input type="text" placeholder="Search for a country " class="search" id="search">
+
+            <div class="dropdown" id="filter">
+                Filter by
+                <i class="fas fa-chevron-down"></i>
+                <ul class="search-menu">
+                    <li id="filter-region">Region</li>
+                    <li id="filter-population">Population range</li>
+                    <li>Languages</li>
+                    <li>Time zone</li>
+                    <li>Currencies</li>
+                </ul>
+
+                <ul id="search-region" class="search-region">
+                    <i class="far fa-times-circle" id="close-region"></i>
+                    <li>All</li>
+                    <li>Africa</li>
+                    <li>Americas</li>
+                    <li>Asia</li>
+                    <li>Europe</li>
+                    <li>Oceania</li>
+                </ul>
+
+                <ul id="search-population" class="search-population">
+                    <i class="far fa-times-circle" id="close-population"></i>
+                    <li>All</li>
+                    <li>50000</li>
+                    <li>100000</li>
+                    <li>1000000</li>
+                    <li>10000000</li>
+                    <li>100000000</li>
+                    <li>1000000000</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal" id="modal">
+        <div >
+            <div class="container modal-style">
+                <button id="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <img src=" " alt="">
+                <div class="modal-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="container countries" id="countries">
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>

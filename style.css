@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --bgcolor: #374258;
+    --pcolor: #ebebeb;
+
+
+}
+
+body{
+    background-color: var(--bgcolor);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5vh;
+
+    background-color: #465470;
+    color: var(--pcolor);
+    color: rgb(173, 185, 201);
+    box-shadow: 0 1px 4px rgba(173, 185, 201, 0.404), 0 2px 4px rgba(173, 185, 201, 0.479);
+}
+
+
+
+
+/* Search Input */
+
+.search {
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    outline: none;
+    font-size: 0.9em;
+    border: none;
+    box-shadow: 0 1px 2px rgba(173, 185, 201, 0.404), 0 2px 6px rgba(173, 185, 201, 0.349);
+
+}
+
+/* Dropdown */
+
+.dropdown {
+    padding: 20px;
+    font-size: 0.9em;
+    position: relative;
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(173, 185, 201, 0.404), 0 2px 6px rgba(173, 185, 201, 0.342);
+    z-index: 1;
+
+
+}
+
+
+.dropdown ul {
+    margin: 1vh 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    top: 100%;
+    border-radius: 10px;
+    list-style-type: none;
+    background-color: white;
+    display: none;
+    box-shadow: 0 1px 4px rgba(173, 185, 201, 0.404), 0 2px 4px rgba(173, 185, 201, 0.479);
+
+}
+
+.dropdown.open .search-menu{
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0.5vh 0;
+    font-weight: 400;
+}
+
+.dropdown ul li:hover {
+    color: rgb(14, 26, 202);
+}
+
+.dropdown .fa-chevron-down{
+    margin-left: 80px;
+}
+
+.search-region{
+    display: none;
+}
+.search-region.open{
+    display: block;
+}
+
+.search-population{
+    display: none;
+}
+.search-population.open{
+    display: block;
+}
+
+
+.region-close {
+    position: initial;
+}
+
+.fa-times-circle {
+    position: absolute;
+    font-size: 20px;
+    transform: translateX(140px);
+}
+
+/* Country Cards */
+
+.card {
+    width: 280px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 3vh;
+    box-shadow: 0 1px 4px rgba(173, 185, 201, 0.404), 0 2px 4px rgba(173, 185, 201, 0.479);
+
+}
+
+.countries{
+    display: flex;
+    justify-content: center;
+}
+
+.card-body{
+    padding: 3vh;
+}
+
+.card-body p, .card-body h3{
+    padding: 0.8vh 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.country-code {
+    display: none;
+}
+
+/* modal */
+
+.fa-times{
+    position: fixed;
+    left: 10%;
+    top: 2vh;
+    font-size: 2em;
+    border: none;
+    color: var(--pcolor);
+}
+
+.modal {
+    background-color: var(--bgcolor);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+}
+
+.modal img {
+    height: 30vh;
+}
+
+.modal-body {
+    padding: 6vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.modal-body p, .modal-body h3 {
+    padding: 2px 0;
+    color: white;
+}
+
+.modal-body h3 {
+    font-size: 1.4em;
+}
+
+.modal-style {
+    flex-direction: column;
+    width: 80vw;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .input-search {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search {
+        margin-bottom: 3vh;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+}
